@@ -44,8 +44,6 @@ function displayProducts() {
       buttonHTML = `<button disabled class="button-add disabled" onclick="add(${p.id}, ${p.price})">remove_shopping_cartk</button>`;
     }
 
-    console.log(p.url_image);
-
     if (p.url_image === null || !p.url_image) {
       p.url_image =
         "https://st.depositphotos.com/1987177/3470/v/600/depositphotos_34700099-stock-illustration-no-photo-available-or-missing.jpg";

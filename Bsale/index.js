@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const mysql = require("mysql");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 var conexion = mysql.createConnection({
   host: "mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com",
@@ -64,8 +64,10 @@ function getProducts() {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use("/", express.static("statics"));
+app.use("/", express.static("view-controller"));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+module.exports = getProducts;

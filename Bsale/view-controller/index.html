@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <script src="../index.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="page-nave">
+        <h1>Bsale test</h1>
+        <div class="container-1">
+            <input type="search" id="search" placeholder="Search..." />
+        </div>
+        <button class="button-checkout" id="boton">Buscar</button>
+        <button id="checkout" class="button-checkout" onclick="pay()">Pagar</button>
+
+        <script>
+            const search = document.querySelector('#search');
+            const boton = document.querySelector('#boton');
+
+            const filtrar = () => {
+                const texto = search.value.tolowerCase();
+            }
+
+            boton.addEventListener('click', filtrar);
+        </script>
+
+
+    </div>
+
+
+    <div id="page-content" class="page-content">
+    </div>
+</body>
