@@ -69,5 +69,3 @@ app.use("/", express.static("view-controller"));
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
-
-module.exports = getProducts;
